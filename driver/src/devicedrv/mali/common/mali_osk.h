@@ -1048,6 +1048,12 @@ mali_bool _mali_osk_timer_pending(_mali_osk_timer_t *tim);
  */
 void _mali_osk_timer_setcallback(_mali_osk_timer_t *tim, _mali_osk_timer_callback_t callback, void *data);
 
+/** @brief Get the data attached to a timer.
+*
+ * @param tim the timer to set callback on.
+*/
+void *_mali_osk_timer_get_data(_mali_osk_timer_t *tim);
+
 /** @brief Terminate a timer, and deallocate resources.
  *
  * The timer must first be stopped by calling _mali_osk_timer_del().
